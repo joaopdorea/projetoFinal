@@ -1,0 +1,335 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+
+
+<html>
+
+<head>
+    <meta charset="UTF=8">
+    <title> Seu ativo</title>
+
+    <style>
+        *{
+            margin: 0;
+            font-family: "Segoe UI";
+            box-sizing: border-box;
+            }
+
+            #main{
+
+                text-align: center;
+                padding-top: 100px;
+
+
+                }
+
+
+            input[type='text']
+            {
+                width: 30%;
+                padding: 10px;
+
+                margin-bottom: 5px;
+                margin-top: 20px;
+
+
+            }
+
+              input[type='email']
+            {
+                width: 30%;
+                padding: 10px;
+
+                margin-bottom: 5px;
+                margin-top: 20px;
+
+
+            }
+
+              input[type='date'], input[type='number']
+            {
+                width: 7%;
+                padding: 10px;
+                border: 2px solid black;
+                margin-bottom: 5px;
+                margin-top: 20px;
+
+
+            }
+
+             input[type='submit']
+            {
+                width: 30%;
+                padding: 10px;
+                border: 2px solid black;
+                background: black;
+                color: white;
+                cursor: pointer;
+                text-transform: uppercase;
+
+
+            }
+
+            h3{
+
+            margin-top: 3px;
+
+            }
+
+            label {
+
+            font-weight: 700;
+            }
+
+            lista-empresas{
+
+            width: 50%;
+            border: 2px solid black;
+
+            }
+
+            .header{
+
+            width: 1920px;
+            height: 125px;
+            background-color: #1E1E1E;
+            color: white;
+
+            }
+
+            #logo{
+                padding-left: 50px;
+                padding-top: 20px;
+                font-size: 24px;
+                display: inline;
+
+            }
+
+            #tela-inicial{
+
+            width: 1920px;
+            height: 707px;
+            background-color: white;
+            display: flex;
+            padding-left: 225px
+
+            }
+
+            #imagem-inicial{
+
+            width: 700px;
+            height: 720px;
+
+            position: left;
+
+            }
+
+            #texto-inicial{
+
+            width: 700px;
+            height: 720px;
+
+            position: right;
+
+            }
+
+            #texto1{
+            padding-left: 120px;
+            padding-top: 385px;
+            font-size: 40px;
+
+            }
+
+            #texto2{
+            padding-left: 120px;
+            font-size: 32px;
+            }
+
+            #imagem-destaque{
+            padding-top: 150px;
+
+            }
+
+            #cadastro{
+
+            width: 1920px;
+            height: 1400px;
+            background-color: #1E1E1E;
+            color: white;
+
+            }
+
+            #newsletter{
+
+            padding-top: 130px;
+
+
+            }
+
+            #botao1{
+            color: black;
+            background-color: #3DF819;
+            width: 100px;
+            height: 40px;
+            font-weight: 500;
+            cursor: pointer;
+            border: 1px solid black;
+
+
+            }
+
+              #botao2{
+            color: black;
+            background-color: #3DF819;
+            width: 100px;
+            height: 40px;
+            font-weight: 500;
+            cursor: pointer;
+            border: 1px solid black;
+
+
+            }
+
+            #logo-image{
+
+            display: inline;
+            padding-top: 25px;
+            padding-left: 80px;
+            }
+
+
+    </style>
+
+</head>
+
+
+
+<body>
+
+<div class ="header">
+
+    <img id = "logo-image" src="{% static 'mysite/images/icone-finans.svg' %} ">
+    <h4 id="logo"> FINAN$ </h4>
+
+
+</div>
+
+
+<div id="tela-inicial">
+
+   <div id="imagem-inicial">
+
+    <img id="imagem-destaque" src="{% static 'mysite/images/advogado2.png' %} ">
+
+   </div>
+
+
+     <div id="texto-inicial">
+
+         <h1 id="texto1"> Rápido, prático, eficiente.</h1>
+         <h1 id="texto2"> Faça sua cotação aqui.</h1>
+
+    </div>
+
+
+</div>
+
+
+
+<div id ="main">
+
+    <div id="cadastro">
+    <form id="newsletter" method ="GET">
+
+
+        <h1> Ponha seu nome e seu email para receber novidades sobre o mundo das finanças!</h1>
+
+        <br><br>
+        <input type="text" name="name" id="name" placeholder="Nome..." required>
+        <br>
+        <input type="email" name="email" id="email" placeholder="Email..." required>
+        <br>
+        <br><br><br>
+
+        <br><br>
+<h1> Use nosso simulador para receber alertas por email.</h1>
+
+    <div class="lista-empresas">
+        <br><br>
+        <h2> Algumas siglas de empresas </h2>
+        <br><br>
+        <h3> PETR4.SA .................PETROBRAS</h3>
+        <h3> VALE3.SA ......................VALE</h3>
+        <h3> BBAS3.SA ...........BANCO DO BRASIL</h3>
+        <h3> MGLU3.SA ............MAGAZINE LUIZA</h3>
+        <h3> ITUB4.SA ......................ITAÚ</h3>
+        <h3> BBDC4.SA ..................BRADESCO</h3>
+
+        <br><br>
+
+    </div>
+
+<form method="GET">
+    <label for = "company"></label>
+    <input type="text" name="company" id="company" placeholder="Empresa..."> <br><br><br>
+
+    <br>
+
+    <H2> Estipule limites inferiores ou superiores e <br> receba alertas para comprar ou vender essas ações!</H2>
+    <br><br>
+    <label for = "limit-inferior"> Limite inferior</label>
+    <input type="number" name="limit-inferior" id="limit-inferior">
+    <label for = "limit-superior"> Limite superior</label>
+    <input type="number" name="limit-superior" id="limit-superior">
+
+    <br><br><br>
+    <input type="submit"  id="botao2" value="Enviar">
+
+
+
+</form>
+
+
+    </form>
+
+
+
+
+
+
+    <br><br>
+
+    {% if invest %}
+        <h3>{{ invest.name }}</h3>
+        <h3>Valor: {{ invest.value }}</h3>
+        <h3>Variação:{{ invest.variation_absolute }}</h3>
+        <h3>Variação relativa: {{ invest.variation_relative }}</h3>
+    {% endif %}
+
+    <br><br><br>
+
+</div>
+
+    </div>
+
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
