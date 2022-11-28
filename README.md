@@ -7,4 +7,4 @@ Funcionamento: foi utilizado o framework Django para fazer esse projeto. Nesse p
 
 O código do WebScraping foi programado no arquivo "views.py". Já o código da página Web foi feito no arquivo "home.html".
 
-Obs.: Existe uma função (alerta()) no arquivo "views.py" que foi inserida como comentário. Caso seja retirada do comentário, o programa irá monitorar os preços das ações de meia em meia hora, e caso os preços estejam favoráveis de acordo com os limites que o cliente inseriu, o programa irá emitir alertas via email, para o email que a pessoa cadastrou na plataforma
+Obs.: Existe uma função (alerta()) no arquivo "views.py" que foi inserida como comentário. Caso seja retirada do comentário, o programa irá monitorar os preços das ações de meia em meia hora, e caso os preços estejam favoráveis de acordo com os limites que o cliente inseriu, o programa irá emitir alertas via email, para o email que a pessoa cadastrou na plataforma.
